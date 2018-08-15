@@ -517,7 +517,7 @@ data = {
 				args: {
 					roty: {
 						type: 'float',
-						description: 'The value, in degrees, to add.'
+						description: 'The value, in degrees, to add.  Always rotates around the top-left corner of the screen.'
 					}
 				},
 				description: 'Adds `roty` to the vertical (called Y, yaw, or heading) axis\' rotation.'
@@ -576,7 +576,7 @@ data = {
 				args: {
 					rotx: {
 						type: 'float',
-						description: 'The value, in degrees, to add.'
+						description: 'The value, in degrees, to add.  Always rotates around the top-left corner of the screen.'
 					}
 				},
 				description: 'Adds `rotx` to the horizontal (called X, or pitch) axis\' rotation.'
@@ -635,7 +635,7 @@ data = {
 						description: 'The value, in degrees, to add.'
 					}
 				},
-				description: 'Adds `rotz` to the Z/roll axis\' rotation.'
+				description: 'Adds `rotz` to the Z/roll axis\' rotation. Always rotates around the top-left corner of the screen.'
 			},
 			rotationx: {
 				args: {
