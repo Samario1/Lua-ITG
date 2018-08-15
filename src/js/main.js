@@ -513,11 +513,11 @@ data = {
 				},
 				description: 'Sets the Actor\'s horizontal alignment. It is 0.5 by default.'
 			},
-			heading: {
+			head: {
 				args: {
 					roty: {
 						type: 'float',
-						description: 'The value, in degrees, to add.'
+						description: 'The value, in degrees, to add.  Always rotates around the top-left corner of the screen.'
 					}
 				},
 				description: 'Adds `roty` to the vertical (called Y, yaw, or heading) axis\' rotation.'
@@ -576,7 +576,7 @@ data = {
 				args: {
 					rotx: {
 						type: 'float',
-						description: 'The value, in degrees, to add.'
+						description: 'The value, in degrees, to add.  Always rotates around the top-left corner of the screen.'
 					}
 				},
 				description: 'Adds `rotx` to the horizontal (called X, or pitch) axis\' rotation.'
@@ -635,7 +635,7 @@ data = {
 						description: 'The value, in degrees, to add.'
 					}
 				},
-				description: 'Adds `rotz` to the Z/roll axis\' rotation.'
+				description: 'Adds `rotz` to the Z/roll axis\' rotation. Always rotates around the top-left corner of the screen.'
 			},
 			rotationx: {
 				args: {
@@ -4812,7 +4812,7 @@ function init() {
 					target = target.length ? target : $('[name=' + thiss.hash.slice(1) +']');
 					if (target.length) {
 						$('#main').animate({
-							scrollTop: $('#main').scrollTop() + target.offset().top - 12
+							scrollTop: $('#main').scFTop() + target.offset().top - 12
 						}, 900);
 					}
 				}, 1000, this);
